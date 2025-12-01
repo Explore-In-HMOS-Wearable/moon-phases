@@ -1,0 +1,72 @@
+{
+  "float": [
+    {
+      "name": "page_text_font_size",
+      "value": "50fp"
+    },
+    {
+      "name": "px_watch_size",
+      "value": "454px"
+    },
+    {
+      "name": "px_watch_radius",
+      "value": "227px"
+    },
+    {
+      "name": "text_large_title",
+      "value": "20fp"
+    },
+    {
+      "name": "text_title",
+      "value": "18fp"
+    },
+    {
+      "name": "text_body",
+      "value": "12fp"
+    },
+    {
+      "name": "text_caption",
+      "value": "10fp"
+    },
+    {
+      "name": "text_small",
+      "value": "8fp"
+    },
+    {
+      "name": "text_date",
+      "value": "14fp"
+    },
+    {
+      "name": "spacing_xs",
+      "value": "4vp"
+    },
+    {
+      "name": "spacing_small",
+      "value": "8vp"
+    },
+    {
+      "name": "spacing_medium",
+      "value": "16vp"
+    },
+    {
+      "name": "spacing_large",
+      "value": "24vp"
+    },
+    {
+      "name": "spacing_xl",
+      "value": "32vp"
+    },
+    {
+      "name": "moon_size",
+      "value": "120vp"
+    },
+    {
+      "name": "card_height",
+      "value": "60vp"
+    },
+    {
+      "name": "card_radius",
+      "value": "12vp"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#000000"
+    },
+    {
+      "name": "background_color",
+      "value": "#000000"
+    },
+    {
+      "name": "text_primary",
+      "value": "#FFF3F3F3"
+    },
+    {
+      "name": "text_secondary",
+      "value": "#FFD0D0D0"
+    },
+    {
+      "name": "text_disabled",
+      "value": "#FFCCCCCC"
+    },
+    {
+      "name": "moon_glow",
+      "value": "#fff4e0"
+    },
+    {
+      "name": "star_gold",
+      "value": "#ffd700"
+    },
+    {
+      "name": "card_background",
+      "value": "#1a1a1a"
+    },
+    {
+      "name": "moon_shadow",
+      "value": "#222222"
+    },
+    {
+      "name": "moon_shadow_light",
+      "value": "#444444"
+    },
+    {
+      "name": "moon_surface",
+      "value": "#f2edd9"
+    }
+  ]
+}
