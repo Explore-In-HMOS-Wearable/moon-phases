@@ -6,7 +6,6 @@ import { MoonPage } from './MoonPage';
 @Component
 struct Index {
   @State currentPageIndex: number = 0;
-  @State currentDate: Date = new Date();
   @State moonData: MoonPhaseData = calculateMoonPhase(new Date());
   private swiperController: SwiperController = new SwiperController();
 

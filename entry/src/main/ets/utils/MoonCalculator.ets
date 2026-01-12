@@ -25,7 +25,7 @@ interface PhaseBoundary {
 }
 
 const KNOWN_NEW_MOON = new Date('2000-01-06T18:14:00Z');
-const SYNODIC_MONTH = 29.53058867; // Days in lunar cycle
+const SYNODIC_MONTH = 29.530588670; // Days in lunar cycle
 const ANOMALISTIC_MONTH = 27.55455; // Days for moon to orbit from perigee to perigee
 const LUNAR_PERIGEE = 356500; // Closest distance from Earth in km
 const LUNAR_APOGEE = 406700; // Farthest distance from Earth in km

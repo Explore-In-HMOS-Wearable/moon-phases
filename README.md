@@ -22,18 +22,17 @@ A moon phases app with offline algorithmic calculations.
 
 # Tech Stack
 
-- **Framework:** HarmonyOS SDK (ArkTS/ArkUI)
-- **UI Components:**
-  - Dynamic Lottie Animation using custom frames and ease-in stop animation
-  - UI optimized for OLED display(Pure black backgrounds for better battery life and performance)
-- **Calculation Logic:**
-  - Offline Algorithmic approach using **Lunar Cycle Information** and **Last Known New Moon(2000-01-06)**
+- **Languages**: ArkTS, ArkUI
+- **Frameworks**: HarmonyOS SDK 5.1.0(18)
+- **Tools**: DevEco Studio Vers 5.1.0.820
+- **Libraries**: @kit.ArkUI, @ohos/lottie
+- **Calculation Logic:** Offline Algorithmic approach using **Lunar Cycle Information** and **Last Known New Moon(2000-01-06)**
 
 
 # Directory Structure
 
 ```
-WeatherVoice/
+MoonPhases/
 │
 ├── entry/
 │   └── src/

@@ -3,7 +3,7 @@ import { TextCaption, TextSmall } from '../components/TextComponents';
 import { calculateMoonPhase } from '../utils/MoonCalculator';
 
 interface CalendarDay {
-  date: Date;
+  epochMs: number;
   dayNumber: string;
   monthName: string;
   phaseIcon: number;
@@ -28,7 +28,7 @@ export struct CalendarPage {
         Row({ space: $r('app.float.spacing_xs') }) {
           ForEach(this.getRowDays(0), (day: CalendarDay) => {
             this.GridCell(day)
-          }, (day: CalendarDay) => day.date.getTime().toString())
+          }, (day: CalendarDay) => day.epochMs.toString())
         }
         .justifyContent(FlexAlign.SpaceEvenly)
 
@@ -36,7 +36,7 @@ export struct CalendarPage {
         Row({ space: $r('app.float.spacing_xs') }) {
           ForEach(this.getRowDays(1), (day: CalendarDay) => {
             this.GridCell(day)
-          }, (day: CalendarDay) => day.date.getTime().toString())
+          }, (day: CalendarDay) => day.epochMs.toString())
         }
         .justifyContent(FlexAlign.SpaceEvenly)
 
@@ -44,7 +44,7 @@ export struct CalendarPage {
         Row({ space: $r('app.float.spacing_xs') }) {
           ForEach(this.getRowDays(2), (day: CalendarDay) => {
             this.GridCell(day)
-          }, (day: CalendarDay) => day.date.getTime().toString())
+          }, (day: CalendarDay) => day.epochMs.toString())
         }
         .justifyContent(FlexAlign.SpaceEvenly)
 
@@ -52,7 +52,7 @@ export struct CalendarPage {
         Row({ space: $r('app.float.spacing_xs') }) {
           ForEach(this.getRowDays(3), (day: CalendarDay) => {
             this.GridCell(day)
-          }, (day: CalendarDay) => day.date.getTime().toString())
+          }, (day: CalendarDay) => day.epochMs.toString())
         }
         .justifyContent(FlexAlign.SpaceEvenly)
       }
@@ -82,16 +82,17 @@ export struct CalendarPage {
     const today = new Date();
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+    const dayMs = 24 * 60 * 60 * 1000;
+    const startMs = today.getTime();
+    const rollingDate = new Date(startMs);
     for (let i = 0; i < 14; i++) {
-      const date = new Date(today);
-      date.setDate(today.getDate() + i);
-
-      const moonData = calculateMoonPhase(date);
+      const epoch = startMs + i * dayMs;
+      const moonData = calculateMoonPhase(rollingDate);
 
       days.push({
-        date: date,
-        dayNumber: date.getDate().toString().padStart(2, '0'),
-        monthName: monthNames[date.getMonth()],
+        epochMs: epoch,
+        dayNumber: rollingDate.getDate().toString().padStart(2, '0'),
+        monthName: monthNames[rollingDate.getMonth()],
         phaseIcon: moonData.phaseIcon,
         isToday: i === 0
       });
